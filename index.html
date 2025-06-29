@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bestell App</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/layout.css" />
+    <script src="script/data.js"></script>
+    <script src="script/template.js"></script>
+    <script src="script/function.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="renderData(myDishes)">
+    <header id="header">
+      <h1><img class="head_logo" src="./Logo/Logo.png" /></h1>
+    </header>
+    <div>
+      <img class="title_pic" src="./assets/burgers.jpg" alt="titelbild" />
+    </div>
+    <section class="margin_LR">
+      <h2 class="restaurant_h2">Dev Patty</h2>
+      <span>Bewertung (4.2 von 5 Sternen)</span>
+    </section>
+    <div class="select_categ margin_LR margin_divs">
+      <a onclick="renderFiltered(1)">Hauptgerichte</a>
+      <a onclick="renderFiltered(2)">Beilagen</a>
+    </div>
+    <div id="dishes"></div>
+
+    <div id="basket-overlay" class="d_none">
+      <div onclick="toggleBasket()">
+        <div class="basket_layout">
+          <section onclick="BubblingProtection(event)" class="basket_window">
+            <div class="basket_h2">
+              <h2>Warenkorb</h2>
+            </div>
+            <div id="basket-item-container"></div>
+            <div class="basket_total">
+              <span>TOTAL PRICE :</span>
+              <span id="basket_price"></span>
+            </div>
+            <div class="order_button">
+              <button>Bestellen</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

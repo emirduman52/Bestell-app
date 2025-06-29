@@ -1,0 +1,63 @@
+
+
+header {
+    background-color: rgb(44, 43, 43);
+    
+}
+
+.select_categ {
+    height: 32px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.250);
+
+}
+
+.select_categ a:hover {
+    color: rgb(243, 116, 31);
+    cursor: pointer;
+    border-bottom: 2px solid rgb(243, 116, 31);
+}
+
+.select_dish {
+    border: 2px solid rgba(128, 128, 128, 0.417);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.select_dish:hover {
+    background-color: rgb(59, 57, 57);
+
+}
+
+button {
+    border-width: 0px;
+    border-radius: 6px;
+    background-color: orange;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+
+button:hover {
+    color: orange;
+    background-color: black;
+}
+
+.basket_window {
+    background-color: rgb(44, 43, 43);
+    height: 500px;
+    width: 250px;    
+    border-radius: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.417);
+    margin-right: 8px;
+    margin-top: 8px;
+    padding: 16px;
+
+}
+
+.basket_h2 {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.250);
+    margin-bottom: 16px;
+
+}
