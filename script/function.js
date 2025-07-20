@@ -25,8 +25,10 @@ function renderFiltered(index) {
 function addBasket(index) {
     //saves the current product in basket array
     currentBasketItems.push(myDishes[index]);    
-    activateBasket();
     renderBasket();
+    activateBasket();
+    saveToLocalStorage();
+
 }
 
 function renderBasket() {
@@ -46,6 +48,7 @@ function renderBasket() {
 function activateBasket() {
     let overlayRef = document.getElementById("basket-overlay");
     overlayRef.classList.remove("d_none");
+    //getFromLocalStorage();
 }
 
 //closes basket
@@ -65,6 +68,7 @@ function BubblingProtection(event) {
     let value = currentBasketItems[index].amount
     document.getElementById("item_index" + index).innerHTML = value;
     increasePrice(index);
+    saveToLocalStorage();
   }
 
   //decreases Item and removes it from the basket once value is below 1
@@ -79,6 +83,7 @@ function BubblingProtection(event) {
         renderBasket();
         return;
     }
+    saveToLocalStorage();
   }
 
   function increasePrice(index) {
@@ -105,3 +110,15 @@ function BubblingProtection(event) {
     }, 0);
   }
   
+  function saveToLocalStorage() {
+    localStorage.setItem("Basket", JSON.stringify(currentBasketItems));
+  }
+
+  function getFromLocalStorage() {
+   let storedBasket = JSON.parse(localStorage.getItem("Basket"));
+    if (storedBasket) {
+      currentBasketItems = storedBasket;
+    }
+   renderBasket();
+ }
+ 

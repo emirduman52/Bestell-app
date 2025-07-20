@@ -37,7 +37,7 @@ function getBasketItemTemplate(item, index, currentBasketItems) {
               <h3>${item.name}</h3>
               <div class="basket_item">
                 <button onclick="decreaseItem(${index})">-</button>
-                <span id="item_index${index}">1</span>
+                <span id="item_index${index}">${item.amount}</span>
                 <button onclick="increaseItem(${index})">+</button>
                 <span id="currentPrice${index}">${item.price.toFixed(2)}€</span>
               </div>
