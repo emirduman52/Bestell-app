@@ -67,7 +67,7 @@ function BubblingProtection(event) {
     currentBasketItems[index].amount++;
     let value = currentBasketItems[index].amount
     document.getElementById("item_index" + index).innerHTML = value;
-    increasePrice(index);
+    calculatePrice(index);
     saveToLocalStorage();
   }
 
@@ -76,7 +76,7 @@ function BubblingProtection(event) {
     currentBasketItems[index].amount--;
     let value = currentBasketItems[index].amount;
     document.getElementById("item_index" + index).innerHTML = value;
-    decreasePrice(index);
+    calculatePrice(index);
 
     if (currentBasketItems[index].amount < 1) {
         currentBasketItems.splice(index, 1);
@@ -86,21 +86,13 @@ function BubblingProtection(event) {
     saveToLocalStorage();
   }
 
-  function increasePrice(index) {
+  function calculatePrice(index) {
     const totalPrice = currentBasketItems[index].amount * currentBasketItems[index].price;
     document.getElementById("currentPrice" + index).innerText = totalPrice.toFixed(2)+ "€";
     document.getElementById("basket_price").innerText = calculateTotal().toFixed(2) + "€";
 
 
   } 
-
-  function decreasePrice(index) {
-    const totalPrice = currentBasketItems[index].amount * currentBasketItems[index].price;
-    document.getElementById("currentPrice" + index).innerText = totalPrice.toFixed(2)+ "€";
-    document.getElementById("basket_price").innerText = calculateTotal().toFixed(2) + "€";
-
-
-  }
 
   //calculates the total price in the basket
   function calculateTotal() {
@@ -122,3 +114,8 @@ function BubblingProtection(event) {
    renderBasket();
  }
  
+function confirmation() {
+  document.getElementById("order_confirmation");
+  return `<span>Hallo</span>`;
+  
+}

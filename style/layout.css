@@ -6,6 +6,12 @@ body {
     background-color: rgb(44, 43, 43);
 }
 
+@media (min-width: 1900px) {
+    body {
+        padding-inline: 250px;
+    }
+}
+
 header {
     display: flex;
     justify-content: center;

@@ -44,7 +44,7 @@ button:hover {
 
 .basket_window {
     background-color: rgb(44, 43, 43);
-    height: 500px;
+    height: 100%;
     width: 250px;    
     border-radius: 8px;
     border: 2px solid rgba(128, 128, 128, 0.417);
@@ -60,4 +60,10 @@ button:hover {
     border-bottom: 2px solid rgba(0, 0, 0, 0.250);
     margin-bottom: 16px;
 
+}
+
+#order_confirmation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
