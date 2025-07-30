@@ -53,17 +53,3 @@ button:hover {
     padding: 16px;
 
 }
-
-.basket_h2 {
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.250);
-    margin-bottom: 16px;
-
-}
-
-#order_confirmation {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
