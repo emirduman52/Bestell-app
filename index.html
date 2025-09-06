@@ -15,7 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./Favicon/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./Favicon/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body onload="renderData(myDishes)">
     <header id="header">
@@ -32,27 +36,28 @@
       <a onclick="renderFiltered(1)">Hauptgerichte</a>
       <a onclick="renderFiltered(2)">Beilagen</a>
     </div>
-    <div id="dishes"></div>
+    <div class="main-container">
+    
+      <div class="dish-container">
+        <div id="dishes"></div>
 
-    <div onclick="toggleBasket()" id="basket-overlay" class="d_none">
-      <div>
-        <div class="basket_layout">
-          <section onclick="BubblingProtection(event)" class="basket_window">
-            <div class="basket_h2">
-              <h2>Warenkorb</h2>
-            </div>
-            <div id="basket-item-container"></div>
-            <div class="basket_total">
-              <span>TOTAL PRICE :</span>
-              <span id="basket_price"></span>
-            </div>
-            <div class="order_button">
-              <button onclick="confirmation()">Bestellen</button>
-            </div>
-            <div id="order_confirmation"></div>
-          </section>
-        </div>
+      </div>
+
+      <div class="basket_container">
+        <section class="basket_window">
+          <h2>Warenkorb</h2>
+          <div id="basket-item-container"></div>
+          <div class="basket_total">
+            <span>TOTAL PRICE :</span>
+            <span id="basket_price"></span>
+          </div>
+          <div class="order_button">
+            <button onclick="confirmation()">Bestellen</button>
+          </div>
+          <div id="order_confirmation"></div>
+        </section>
       </div>
     </div>
+    <footer> </footer>
   </body>
 </html>

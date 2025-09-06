@@ -26,7 +26,6 @@ function addBasket(index) {
     //saves the current product in basket array
     currentBasketItems.push(myDishes[index]);    
     renderBasket();
-    activateBasket();
     saveToLocalStorage();
 
 }
@@ -43,19 +42,6 @@ function renderBasket() {
 
 }
 
-
-//activates the overlay (basket)
-function activateBasket() {
-    let overlayRef = document.getElementById("basket-overlay");
-    overlayRef.classList.remove("d_none");
-    //getFromLocalStorage();
-}
-
-//closes basket
-function toggleBasket() {
-    let overlayRef = document.getElementById("basket-overlay");
-    overlayRef.classList.add("d_none");
-}
 
 //stops Events from triggering at the same time
 function BubblingProtection(event) {

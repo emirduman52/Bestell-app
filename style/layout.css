@@ -41,7 +41,7 @@ header {
 }
 
 .margin_divs {
-    margin-top: 40px;
+    margin-top: 8px;
     margin-bottom: 20px;
 }
 
@@ -55,24 +55,8 @@ header {
     justify-content: space-between;
 }
 
-#basket-overlay {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(30, 30, 30, 0.257);
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.basket_layout {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.d_none {
-    display: none;
+.basket_container {
+    flex: 1;
 }
 
 .order_button {
@@ -106,4 +90,13 @@ header {
 
 .img_section {
     padding-inline: 20px;
+}
+
+.main-container {
+    display: flex;
+}
+
+.dish-container {
+    flex: 2;
+
 }
