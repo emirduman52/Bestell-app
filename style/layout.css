@@ -100,3 +100,7 @@ header {
     flex: 2;
 
 }
+
+.d_none {
+    display: none !important;
+}

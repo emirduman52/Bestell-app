@@ -101,7 +101,7 @@ function BubblingProtection(event) {
  }
  
 function confirmation() {
-  document.getElementById("order_confirmation");
-  return `<span>Hallo</span>`;
-  
+  let overlayRef = document.getElementById("order_confirmation");
+  overlayRef.classList.remove("d_none");
 }
+

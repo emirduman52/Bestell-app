@@ -1,22 +1,3 @@
-function getHeaderTemplate(dishIndex) {
-  //template funktioniert nicht
-  return `<header>
-      <h1><img class="head_logo" src="./Logo/Logo.png" /></h1>
-    </header>
-    <div>
-      <img class="title_pic" src="./assets/burgers.jpg" alt="titelbild" />
-    </div>
-    <section class="margin_LR">
-      <h2 class="restaurant_h2">Dev Patty</h2>
-      <span>Bewertung ()</span>
-    </section>
-    <div class="select_categ margin_LR margin_divs">
-      <a onclick="renderDishes">Hauptgerichte</a>
-      <a onclick="renderSideDish">Beilagen</a>
-    </div>`
-}
-
-
 function getDishTemplate(dishesArray, dishIndex) {
   const dish = dishesArray[dishIndex]; //holt das aktuelle gericht
   return `<div class="select_dish margin_LR margin_divs">
@@ -26,7 +7,6 @@ function getDishTemplate(dishesArray, dishIndex) {
         <span>${dish.price.toFixed(2)}€</span>
         <button onclick="addBasket(${dishIndex})">+</button>
       </div>
-      <button onclick="activateBasket(currentBasketItems)">Warenkorb Anzeigen</button>
     </div>`
 }
 
