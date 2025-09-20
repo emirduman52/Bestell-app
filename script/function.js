@@ -24,10 +24,10 @@ function renderFiltered(index) {
 
 function addBasket(index) {
     //saves the current product in basket array
-    currentBasketItems.push(myDishes[index]);    
+    currentBasketItems.push(myDishes[index]);
+    basket_display();    
     renderBasket();
     saveToLocalStorage();
-
 }
 
 function renderBasket() {
@@ -105,3 +105,7 @@ function confirmation() {
   overlayRef.classList.remove("d_none");
 }
 
+function basket_display() {
+  let overlayRef = document.getElementsByClassName("basket_container");
+  overlayRef[0].classList.remove("d_none");
+}
