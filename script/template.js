@@ -20,6 +20,8 @@ function getBasketItemTemplate(item, index, currentBasketItems) {
                 <span id="item_index${index}">${item.amount}</span>
                 <button onclick="increaseItem(${index})">+</button>
                 <span id="currentPrice${index}">${item.price.toFixed(2)}€</span>
+                <button onclick="splice_product(${index})">X</button>
+
               </div>
             </div>
    `

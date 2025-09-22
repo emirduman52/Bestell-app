@@ -109,3 +109,8 @@ function basket_display() {
   let overlayRef = document.getElementsByClassName("basket_container");
   overlayRef[0].classList.remove("d_none");
 }
+
+function splice_product(index) {
+  currentBasketItems.splice(index, 1);
+        renderBasket();
+}
