@@ -24,7 +24,16 @@ function renderFiltered(index) {
 
 function addBasket(index) {
     //saves the current product in basket array
-    currentBasketItems.push(myDishes[index]);
+
+    let existingItem = currentBasketItems.find(item => item.name === myDishes[index].name);
+    if (existingItem) {
+      existingItem.amount++;
+    } else {
+      currentBasketItems.push({
+        ...myDishes[index],
+        amount:1
+      });
+    }
     basket_display();    
     renderBasket();
     saveToLocalStorage();
@@ -103,6 +112,8 @@ function BubblingProtection(event) {
 function confirmation() {
   let overlayRef = document.getElementById("order_confirmation");
   overlayRef.classList.remove("d_none");
+  currentBasketItems.splice(0, currentBasketItems.length)
+  renderBasket();
 }
 
 function basket_display() {
