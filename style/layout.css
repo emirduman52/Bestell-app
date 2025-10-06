@@ -57,6 +57,7 @@ header {
 
 .basket_container {
     flex: 1;
+
 }
 
 .order_button {
@@ -103,4 +104,19 @@ header {
 
 .d_none {
     display: none !important;
+}
+
+
+@media (max-width: 375px) {
+    .basket_container {
+        display: none !important;
+    }
+    
+    .basket-toggle-btn {
+        position: fixed;
+        bottom: 0px;
+        height: 50px;
+        width: 100%;
+        display: block !important;
+    }
 }

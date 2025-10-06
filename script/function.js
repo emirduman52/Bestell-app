@@ -125,3 +125,8 @@ function splice_product(index) {
   currentBasketItems.splice(index, 1);
         renderBasket();
 }
+
+function toggleBasket() {
+  let overlayRef = document.getElementById("basketToggleBtn");
+  overlayRef.classList.toggle("d_none");
+}
