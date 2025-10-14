@@ -1,9 +1,15 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
 body {
     margin: 0;
     box-sizing: border-box;
     font-family: "Noto Sans", sans-serif;
     color: white;
     background-color: rgb(44, 43, 43);
+
 }
 
 @media (min-width: 2560px) {
@@ -109,7 +115,14 @@ header {
 
 @media (max-width: 375px) {
     .basket_container {
-        display: none !important;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        justify-content: flex-start;
+        top: 0;
+        right: 10px;
+        width: 90%;
+        height: 90vh;
     }
     
     .basket-toggle-btn {

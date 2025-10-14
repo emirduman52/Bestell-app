@@ -13,14 +13,7 @@ function renderData(dishesToRender) {
 }
 
 
-function renderFiltered(index) {
-    if (index == 1) {
-        renderData(myDishes.filter(dish => dish.category === "main"));
-    }
-    if (index == 2) {
-        renderData(myDishes.filter(dish => dish.category === "side"));
-    }
-}
+
 
 function addBasket(index) {
     //saves the current product in basket array
@@ -127,6 +120,6 @@ function splice_product(index) {
 }
 
 function toggleBasket() {
-  let overlayRef = document.getElementById("basketToggleBtn");
+  let overlayRef = document.getElementsByClassName("basket_container")[0];
   overlayRef.classList.toggle("d_none");
 }
