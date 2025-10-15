@@ -24,9 +24,16 @@ function addBasket(index) {
       amount: 1,
     });
   }
-  basket_display();
+
+  if (!isMobileView()) { //if not mobile width, open basket
+    basket_display();
+  }
+
+  //basket_display();
   renderBasket();
   saveToLocalStorage();
+  updateBasketCounter();
+
 }
 
 function renderBasket() {
@@ -94,6 +101,7 @@ function getFromLocalStorage() {
     currentBasketItems = storedBasket;
   }
   renderBasket();
+  updateBasketCounter()
 }
 
 function confirmation() {
@@ -116,4 +124,15 @@ function splice_product(index) {
 function toggleBasket() {
   let overlayRef = document.getElementsByClassName("basket_container")[0];
   overlayRef.classList.toggle("d_none");
+}
+
+function isMobileView() {
+  return window.innerWidth <= 375;
+}
+
+function updateBasketCounter() {
+  let count = 0;
+  const countElement = document.getElementById("basketCount");
+  basketCount = currentBasketItems.reduce((sum, item) => sum + item.amount, 0);
+  countElement.innerText = basketCount;
 }
