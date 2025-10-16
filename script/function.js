@@ -109,6 +109,7 @@ function confirmation() {
   overlayRef.classList.remove("d_none");
   currentBasketItems.splice(0, currentBasketItems.length);
   renderBasket();
+  updateBasketCounter();
 }
 
 function basket_display() {
