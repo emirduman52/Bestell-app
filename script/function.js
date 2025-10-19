@@ -1,4 +1,3 @@
-//global defined
 let dishContent = document.getElementById("dishes");
 let currentBasketItems = [];
 
@@ -11,8 +10,6 @@ function renderData(dishesToRender) {
 }
 
 function addBasket(index) {
-  //saves the current product in basket array
-
   let existingItem = currentBasketItems.find(
     (item) => item.name === myDishes[index].name
   );
@@ -25,15 +22,13 @@ function addBasket(index) {
     });
   }
 
-  if (!isMobileView()) { //if not mobile width, open basket
+  if (!isMobileView()) {
     basket_display();
   }
 
-  //basket_display();
   renderBasket();
   saveToLocalStorage();
   updateBasketCounter();
-
 }
 
 function renderBasket() {
@@ -47,7 +42,6 @@ function renderBasket() {
     calculateTotal().toFixed(2) + "€";
 }
 
-//stops Events from triggering at the same time
 function BubblingProtection(event) {
   event.stopPropagation();
 }
@@ -60,7 +54,6 @@ function increaseItem(index) {
   saveToLocalStorage();
 }
 
-//decreases Item and removes it from the basket once value is below 1
 function decreaseItem(index) {
   currentBasketItems[index].amount--;
   let value = currentBasketItems[index].amount;
@@ -84,7 +77,6 @@ function calculatePrice(index) {
     calculateTotal().toFixed(2) + "€";
 }
 
-//calculates the total price in the basket
 function calculateTotal() {
   return currentBasketItems.reduce(function (sum, item) {
     return sum + item.amount * item.price;
@@ -101,7 +93,7 @@ function getFromLocalStorage() {
     currentBasketItems = storedBasket;
   }
   renderBasket();
-  updateBasketCounter()
+  updateBasketCounter();
 }
 
 function confirmation() {
